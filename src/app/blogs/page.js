@@ -5,7 +5,7 @@ async function fetchAllBlogs() {
     try {
         const apiResponse = await fetch(`${BASE_URL}/api/get-blogs`, {
             method: "GET",
-            cache:"default"
+            cache:"no-cache"
         });
         const result = await apiResponse.json();
         return result?.data;
