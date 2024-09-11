@@ -7,8 +7,7 @@ export async function GET(){
     try{
         await dbConnect();
         const response=await Blog.find({});
-        console.log("backend api res",response);
-
+        
         if(response){
             return NextResponse.json({
                 success:true,

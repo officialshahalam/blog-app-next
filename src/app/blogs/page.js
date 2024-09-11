@@ -1,11 +1,11 @@
 import BlogOverview from "@/components/blogOverView/page";
 
 async function fetchAllBlogs() {
-    BASE_URL=process.env.GET_BLOG_BASE_URL
+    const BASE_URL=process.env.GET_BLOG_BASE_URL
     try {
         const apiResponse = await fetch(`${BASE_URL}/api/get-blogs`, {
             method: "GET",
-            cache: "no-store",
+            cache:"default"
         });
         const result = await apiResponse.json();
         return result?.data;
@@ -19,8 +19,6 @@ async function fetchAllBlogs() {
 const Blogs = async () => {
 
     const allBlogs = await fetchAllBlogs();
-
-
 
     return (
         <div className="min-h-screen bg-gradient-to-tr from-violet-400 via-violet-600 to-violet-700">
