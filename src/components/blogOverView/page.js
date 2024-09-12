@@ -72,7 +72,7 @@ const BlogOverview = ({ allBlogs }) => {
                 setBlogFormData({ title: "", description: "" });
                 }}>
                 <DialogTrigger asChild>
-                    <Button variant="outline">Add Blog</Button>
+                    <Button variant="costom">Add Blog</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">
                     <DialogHeader>

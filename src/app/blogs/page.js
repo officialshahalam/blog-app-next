@@ -1,10 +1,10 @@
 import BlogOverview from "@/components/blogOverView/page";
 
 async function fetchAllBlogs() {
-    const GET_URl=`${process.env.GET_BLOG_BASE_URL}/api/get-blogs`;
-    console.log("GET_URL is:::",GET_URl);
+    const GET_URl=`${process.env.BASE_URL}/api/get-blogs`;
     try {
-
+        
+        console.log("GET_URL is:::",GET_URl);
         const apiResponse = await fetch(GET_URl, {
             method: "GET",
             cache:"no-cache"
